@@ -1,4 +1,4 @@
-# frontendmentor.io-challenges
+# [Eye-for-UI](https://www.google.com) 
 
 This repository includes the solutions for UI challanges found at [Frontend Mentor](https://www.frontendmentor.io/dashboard) 
 
