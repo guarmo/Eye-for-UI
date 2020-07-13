@@ -1,0 +1,264 @@
+/* CSS resets */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* General styles */
+body {
+  font-family: "Barlow", sans-serif;
+  font-size: 18px;
+  padding: 40px;
+  line-height: 1.4;
+}
+:root {
+  --red: hsl(0, 100%, 68%);
+  --veryDarkBlue: hsl(230, 29%, 20%);
+  --darkGrayishBlue: hsl(230, 11%, 40%);
+  --lightGrayishBlue: hsl(207, 33%, 95%);
+}
+.container {
+  max-width: 80%;
+  margin: auto;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Headings, call to action, nav */
+h1,
+h2,
+h3,
+.btn,
+#main-nav {
+  font-family: "Barlow Condensed", sans-serif;
+}
+
+/* Light blue background */
+body::before {
+  content: "";
+  background-color: var(--lightGrayishBlue);
+  opacity: 0.4;
+  width: 50%;
+  height: 55%;
+  border-radius: 40px;
+  border-top-right-radius: 0;
+  position: absolute;
+  right: 0px;
+  top: 0;
+  z-index: -2;
+}
+
+/* Nav */
+#main-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+#main-nav #hamburger {
+  display: none;
+}
+#main-nav .map-nav {
+  display: flex;
+  align-items: center;
+  z-index: 1;
+}
+.mobile-nav {
+  display: none;
+}
+
+#main-nav .map-nav ul {
+  display: flex;
+  align-items: center;
+  list-style: none;
+}
+#main-nav .map-nav ul > * {
+  margin: 0 20px;
+}
+#main-nav .map-nav li a:hover,
+.mobile-nav ul > *:hover {
+  text-decoration: underline;
+}
+#main-nav .map-nav ul .break {
+  width: 10px;
+  height: 10px;
+  background-color: var(--darkGrayishBlue);
+  border-radius: 50%;
+  opacity: 0.8;
+}
+#main-nav .map-nav ul #login,
+.mobile-nav ul #login {
+  color: var(--darkGrayishBlue);
+  opacity: 0.8;
+}
+
+/* Grid */
+main .container {
+  padding-top: 10%;
+}
+#main-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+.copy-section {
+  text-transform: uppercase;
+}
+.copy-section #new {
+  display: inline-block;
+  color: #fff;
+  background-color: var(--veryDarkBlue);
+  padding: 0 10px;
+  border-radius: 10px;
+}
+.copy-section .thin-heading {
+  display: inline-block;
+  color: var(--darkGrayishBlue);
+  font-weight: 400;
+  opacity: 0.5;
+  letter-spacing: 1px;
+  margin-left: 10px;
+}
+.copy-section h1 {
+  font-size: 60px;
+  line-height: 1;
+  margin: 5% 0;
+}
+.copy-section p {
+  text-transform: initial;
+  color: var(--darkGrayishBlue);
+  margin-bottom: 10%;
+}
+.copy-section .btn {
+  cursor: pointer;
+  border: none;
+  text-transform: uppercase;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 500;
+  background: var(--red);
+  padding: 15px 50px;
+  border-radius: 5px;
+}
+.copy-section .btn:hover {
+  opacity: 0.7;
+}
+.mockup-section {
+  position: absolute;
+  top: 200px;
+  left: 50%;
+  width: 50%;
+  height: 70%;
+  min-height: 200px;
+  background-image: url(images/illustration-devices.svg);
+  background-repeat: no-repeat;
+  background-position: -35% 0;
+  background-size: 125%;
+  z-index: 2;
+}
+
+/* JS classes */
+.hide {
+  display: none !important;
+}
+.display {
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+}
+
+/* Media queries */
+/* Tablet size*/
+@media screen and (max-width: 780px) {
+  body {
+    padding: 20px;
+    overflow-x: hidden;
+  }
+  .container {
+    max-width: 90%;
+  }
+  #main-nav .map-nav ul > * {
+    margin: 0 10px;
+  }
+}
+/* Mobile size*/
+@media screen and (max-width: 450px) {
+  .container {
+    max-width: 100%;
+  }
+  #main-nav #hamburger {
+    display: block;
+  }
+  #logo {
+    width: 28px;
+    height: 28px;
+  }
+  .mobile-nav {
+    position: absolute;
+    background: #fff;
+    width: 80%;
+    height: 23%;
+    z-index: 3;
+    margin: auto;
+    left: 50%;
+    top: 10%;
+    margin-left: -40%;
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 16px;
+    font-weight: 700;
+    font-family: "Barlow Condensed", sans-serif;
+    display: none;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  }
+  .mobile-nav ul {
+    list-style: none;
+  }
+  .mobile-nav ul li {
+    padding: 5px 0;
+  }
+  .mobile-nav ul hr {
+    border-top: 1px solid var(--lightGrayishBlue);
+    margin: 5px -150%;
+  }
+  .map-nav {
+    display: none !important;
+  }
+  #main-grid {
+    grid-template-columns: 1fr;
+    grid-template-rows: 200px auto;
+    grid-template-areas:
+      "mockup"
+      "copy";
+    grid-gap: 15%;
+  }
+  .mockup-section {
+    position: absolute;
+    left: 0;
+    top: 10%;
+    background-size: 130%;
+    width: 100%;
+    height: 350px;
+    grid-area: mockup;
+  }
+  .copy-section {
+    grid-area: copy;
+  }
+  .copy-section .thin-heading {
+    font-size: 16px;
+  }
+  .copy-section h1 {
+    font-size: 33px;
+  }
+  .copy-section p {
+    font-size: 16px;
+  }
+  .copy-section .btn {
+    padding: 15px 10px;
+    font-size: 16px;
+  }
+}

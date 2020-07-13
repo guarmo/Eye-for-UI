@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Frontend Mentor | [Challenge Name Here]</title>
+  </head>
+  <body>
+    <header class="header-flex">
+      <h1>Our Pricing</h1>
+      <div class="toggle">
+        <p>Annually</p>
+        <label class="switch">
+          <input type="checkbox" id="myCheck" />
+          <span class="slider round"></span>
+        </label>
+        <p>Monthly</p>
+      </div>
+    </header>
+
+    <main>
+      <div class="container">
+        <div class="grid">
+          <div class="card basic">
+            <h3>Basic</h3>
+            <div class="price">
+              <h1 class="dollar-sign">&dollar;</h1>
+              <h1 id="basic-cost" class="cost">19.99</h1>
+            </div>
+            <ul>
+              <hr />
+              <li>500 GB Storage</li>
+              <hr />
+              <li>2 Users Allowed</li>
+              <hr />
+              <li>Send up to 3 GB</li>
+              <hr />
+            </ul>
+            <button class="btn" type="button">Learn More</button>
+          </div>
+
+          <div class="card professional">
+            <h3>Professional</h3>
+            <div class="price">
+              <h1 class="dollar-sign">&dollar;</h1>
+              <h1 id="pro-cost" class="cost">24.99</h1>
+            </div>
+            <ul>
+              <hr />
+              <li>1 TB Storage</li>
+              <hr />
+              <li>5 Users Allowed</li>
+              <hr />
+              <li>Send up to 10 GB</li>
+              <hr />
+            </ul>
+            <button class="btn" type="button">Learn More</button>
+          </div>
+
+          <div class="card master">
+            <h3>Master</h3>
+            <div class="price">
+              <h1 class="dollar-sign">&dollar;</h1>
+              <h1 id="master-cost" class="cost">39.99</h1>
+            </div>
+            <ul>
+              <hr />
+              <li>2 TB Storage</li>
+              <hr />
+              <li>10 Users Allowed</li>
+              <hr />
+              <li>Send up to 20 GB</li>
+              <hr />
+            </ul>
+            <button class="btn" type="button">Learn More</button>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script src="main.js"></script>
+  </body>
+</html>

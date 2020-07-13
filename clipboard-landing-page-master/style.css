@@ -1,0 +1,362 @@
+/* CSS resets */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* General styles */
+body {
+  font-size: 18px;
+  font-family: "Bai Jamjuree", sans-serif;
+  line-height: 1.4;
+  color: var(--darkGrayishBlue);
+}
+:root {
+  --strongCyan: hsl(171, 66%, 44%);
+  --lightBlue: hsl(233, 100%, 69%);
+  --darkGrayishBlue: hsl(210, 10%, 33%);
+  --grayishBlue: hsl(201, 11%, 66%);
+}
+h1,
+h2,
+h3 {
+  color: var(--darkGrayishBlue);
+}
+p {
+  color: var(--grayishBlue);
+}
+
+/* Utilities */
+.container {
+  max-width: 50%;
+  margin: auto;
+}
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+.btn {
+  cursor: pointer;
+  border: none;
+  min-height: 60px;
+  min-width: 100%;
+  border-radius: 50px;
+  font-family: inherit;
+  font-weight: bold;
+  font-size: 18px;
+  color: #fff;
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.btn:hover {
+  opacity: 0.7;
+}
+.btnIos {
+  background-color: var(--strongCyan);
+}
+.btnMac {
+  background-color: var(--lightBlue);
+  margin-left: 10px;
+}
+.heading {
+  text-align: center;
+  padding: 100px 0;
+}
+.heading h1 {
+  font-size: 35px;
+}
+.heading p {
+  margin-top: 20px;
+  line-height: 1.6;
+}
+
+/* Header */
+.header-top {
+  background-image: url(images/bg-header-desktop.png);
+  background-repeat: no-repeat;
+  height: 45vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.header-top #logo {
+  margin-top: 70px;
+}
+.header-copy .container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.header-copy h1 {
+  font-size: 45px;
+  text-align: center;
+}
+.header-copy p {
+  text-align: center;
+  font-size: 20px;
+  margin: 20px 0 40px 0;
+}
+
+/* Section One */
+.section-one .heading {
+  margin-top: 60px;
+}
+.section-one .grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  background-repeat: no-repeat;
+}
+.section-one .grid .image img {
+  max-width: 100%;
+  transform: translateX(-2rem);
+}
+.section-one .features {
+  display: flex;
+  flex-direction: column;
+  max-width: 50%;
+  margin: 60px 0 0 110px;
+}
+.feature {
+  margin-bottom: 60px;
+}
+.feature h3 {
+  font-size: 23px;
+}
+.feature p {
+  font-size: 16px;
+  line-height: 1.8;
+  margin-top: 5px;
+}
+
+/* Section Two */
+.section-two {
+  margin-top: 40px;
+}
+.section-two .image {
+  display: flex;
+  justify-content: center;
+}
+.section-two .image img {
+  width: 100%;
+  max-width: 900px;
+  height: auto;
+}
+
+/* Section three */
+.section-three .features {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  max-width: 80%;
+  margin: auto;
+  text-align: center;
+}
+.section-three .features .feature {
+  margin-bottom: 0;
+}
+.section-three .features .feature-one img {
+  margin-bottom: 28px !important;
+}
+.section-three .features .feature img {
+  margin-bottom: 38px;
+}
+.section-three .features .feature p {
+  max-width: 90%;
+  margin: 20px auto;
+}
+
+/* Logos */
+.logos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+  grid-gap: 2rem;
+  max-width: 80%;
+  margin: auto;
+}
+.logos .logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 150px;
+}
+
+/* Section four */
+.section-four {
+  margin: 60px 0 70px 0;
+}
+.section-four h1 {
+  font-size: 38px;
+}
+.section-four p {
+  font-size: 18px;
+}
+.section-four .buttons {
+  margin-top: 60px;
+}
+
+/* Footer */
+footer {
+  background-color: rgba(159, 171, 178, 0.1);
+  padding: 25px 0;
+}
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 80%;
+  margin: auto;
+}
+
+/* Logo */
+.footer-content #logo {
+  width: 60px;
+  height: 60px;
+  margin-top: 20px;
+}
+/* Map */
+.footer-content .map {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+.footer-content .map #first {
+  padding-left: 20px;
+}
+.footer-content .map ul {
+  list-style: none;
+  padding-left: 40px;
+}
+.footer-content .map ul li {
+  margin: 20px 0;
+}
+.footer-content .map ul li a {
+  text-decoration: none;
+  color: var(--darkGrayishBlue);
+}
+.footer-content .map ul li a:hover {
+  color: var(--strongCyan);
+}
+
+/* Social */
+.footer-content .social > * {
+  margin-left: 15px;
+}
+.icon {
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+}
+.icon:hover {
+  filter: invert(66%) sepia(11%) saturate(2482%) hue-rotate(122deg)
+    brightness(90%) contrast(88%);
+}
+.icon-facebook {
+  background-image: url(images/icon-facebook.svg);
+}
+.icon-twitter {
+  background-image: url(images/icon-twitter.svg);
+  height: 20px;
+}
+.icon-instagram {
+  background-image: url(images/icon-instagram.svg);
+}
+
+/* Media queries */
+/* Tablet size */
+@media screen and (max-width: 780px) {
+  .buttons {
+    grid-template-columns: 1fr;
+  }
+  .btnMac {
+    margin-left: 0;
+    margin-top: 10px;
+  }
+  .section-one .grid {
+    grid-template-columns: 1fr;
+  }
+  .section-one .features {
+    margin: auto;
+    text-align: center;
+  }
+  .section-one .grid .image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 40px;
+  }
+  .section-one .grid .image img {
+    max-width: 600px;
+    height: auto;
+    max-width: 100%;
+    height: auto;
+    transform: translateX(0);
+  }
+  .section-three .features {
+    grid-template-columns: 1fr;
+  }
+  .footer-content {
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  /* Mobile */
+  @media screen and (max-width: 600px) {
+    .container {
+      max-width: 80%;
+    }
+    .btn {
+      font-size: 16px;
+    }
+    .header-top {
+      background-image: url(images/bg-header-mobile.png);
+      background-size: cover;
+    }
+    .header-copy {
+      margin-bottom: 60px;
+    }
+    .header-copy h1 {
+      font-size: 26px;
+    }
+    .header-copy p {
+      font-size: 18px;
+    }
+    .heading {
+      padding: 40px 0;
+    }
+    .heading h1 {
+      font-size: 21px;
+    }
+    .heading p {
+      font-size: 16px;
+    }
+    .section-one .heading {
+      margin-top: 0;
+    }
+    .section-three .logos {
+      grid-template-columns: 1fr;
+      margin-top: 40px;
+      grid-gap: 4rem;
+    }
+    .section-three .logos .logo {
+      margin-top: 0;
+    }
+    .footer-content .map {
+      display: grid;
+      grid-template-columns: 1fr;
+    }
+    .footer-content .map #logo {
+      align-self: center;
+      justify-self: center;
+      margin-top: 0;
+    }
+    .footer-content .map ul,
+    .footer-content .map #first {
+      padding-left: 0;
+      text-align: center;
+    }
+    .footer-content .social {
+      margin-top: 40px;
+    }
+    .footer-content .social .icon-facebook {
+      margin-left: 0;
+    }
+  }
+}

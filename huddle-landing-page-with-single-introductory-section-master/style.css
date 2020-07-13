@@ -1,0 +1,139 @@
+/* CSS resets */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* General styles */
+:root {
+  --violet: hsl(257, 40%, 49%);
+}
+
+h1 {
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  background: url(images/bg-desktop.svg);
+  background-color: var(--violet);
+  background-repeat: no-repeat;
+  color: #fff;
+}
+
+.container {
+  margin: auto;
+  max-width: 1280px;
+  padding: 40px 20px;
+}
+
+/* Header */
+#logo {
+  width: 230px;
+}
+
+/* Main grid */
+.grid {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  grid-gap: 1rem;
+  margin-top: 60px;
+}
+
+/* Illustration section */
+.illustration img {
+  max-width: 100%;
+  min-width: 400px;
+  height: auto;
+}
+
+/* Copy section */
+.copy {
+  margin: 40px 0 0 40px;
+}
+
+.copy h1 {
+  font-size: 40px;
+  font-weight: 600;
+}
+.copy p {
+  margin: 20px 0;
+}
+
+.copy .btn {
+  padding: 20px 70px;
+  cursor: pointer;
+  color: var(--violet);
+  background: #fff;
+  font-size: 16px;
+  border: none;
+  border-radius: 50px;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s;
+}
+
+.copy .btn:hover {
+  transform: scale(1.1);
+}
+
+/* Footer */
+.footer-flex {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.footer-flex #twitter {
+  margin: 0 10px;
+}
+
+.footer-flex > * {
+  color: #fff;
+}
+
+.footer-flex > *:hover {
+  opacity: 0.8;
+}
+
+/* Media queries */
+@media screen and (max-width: 800px) {
+  body {
+    background-image: url(images/bg-mobile.svg);
+    background-size: 100%;
+  }
+  #logo {
+    width: 190px;
+  }
+  .grid {
+    grid-template-columns: 1fr;
+  }
+  .copy {
+    text-align: center;
+    margin: 40px 0;
+  }
+  .copy h1 {
+    font-size: 36px;
+  }
+  .footer-flex {
+    justify-content: center;
+    margin-top: 100px;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .container {
+    padding: 40px 40px;
+  }
+  .grid {
+    margin-top: 40px;
+  }
+  .illustration img {
+    min-width: 200px;
+  }
+  .copy h1 {
+    font-size: 26px;
+  }
+  .copy .btn {
+    padding: 15px 80px;
+  }
+}
