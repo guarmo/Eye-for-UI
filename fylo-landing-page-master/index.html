@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Raleway:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <title>Frontend Mentor | Fylo landing page with two column layout</title>
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <div class="flex-nav">
+          <img src="images/logo.svg" id="logo" alt="" />
+
+          <ul>
+            <li><a href="#">Features</a></li>
+            <li><a href="#">Team</a></li>
+            <li><a href="#">Sign In</a></li>
+          </ul>
+        </div>
+      </header>
+
+      <main>
+        <!-- Section One -->
+        <div class="section section-one">
+          <div class="text">
+            <h1>
+              All your files in one secure
+            </h1>
+            <h1>
+              location, accessible anywhere.
+            </h1>
+            <p class="py-1">
+              Fylo stores your most important files in one secure location.
+              Access them wherever you need, share and collaborate with friends,
+              family, and co-workers.
+            </p>
+            <div class="inputs">
+              <input
+                id="email"
+                type="email"
+                class="emailInput"
+                placeholder="Enter your email..."
+              />
+              <button type="button" class="btn btn-section-one">
+                Get Started
+              </button>
+            </div>
+          </div>
+          <div class="illustration">
+            <img src="images/illustration-1.svg" class="illustration" alt="" />
+          </div>
+        </div>
+        <!-- Section two -->
+        <div class="section section-two">
+          <div class="text">
+            <h1 class="py-1">
+              Stay productive, wherever you are
+            </h1>
+            <p class="py-1">
+              Never let location be an issue when accessing your files. Fylo has
+              you covered for all of your file storage needs.
+            </p>
+            <p class="py-1">
+              Securely share files and folders with friends, family and
+              colleagues for live collaboration. No email attachments required!
+            </p>
+            <a id="seeHow" href="#"
+              >See how Fylo works
+              <img
+                id="arrow"
+                src="images/icon-arrow.svg"
+                width="20px"
+                height="20px"
+              />
+            </a>
+            <div class="card">
+              <img src="images/icon-quotes.svg" alt="" />
+              <p>
+                Fylo has improved our team productivity by an order of
+                magnitude. Since making the switch our team has become a
+                well-oiled collaboration machine.
+              </p>
+              <div class="footer-card">
+                <img
+                  src="images/avatar-testimonial.jpg"
+                  width="40px"
+                  height="40px"
+                  id="testiomonial-img"
+                />
+                <div class="flex">
+                  <h5 id="name">Kyle Burton</h5>
+                  <h6 id="role">Founder & CEO, Huddle</h6>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="illustration">
+            <img src="images/illustration-2.svg" class="illustration" alt="" />
+          </div>
+        </div>
+      </main>
+    </div>
+
+    <!-- Pre-footer -->
+    <div class="pre-footer">
+      <div class="text">
+        <h2>Get early access today</h2>
+        <p>
+          It only takes a minute to sign up and our free starter tier is
+          extremely generous. If you have any questions, our support team would
+          be happy to help you.
+        </p>
+      </div>
+      <div class="inputs">
+        <input
+          id="email"
+          type="email"
+          class="emailInput"
+          placeholder="email@example.com"
+        />
+        <button type="button" class="btn">Get Started For Free</button>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+      <img id="logo" src="images/logo white.svg" alt="" />
+      <div class="footer-grid">
+        <div id="first">
+          <div class="phone">
+            <div class="icon">
+              <img src="/images/icon-phone.svg" alt="" />
+            </div>
+            <div>
+              <p>Phone: +1-543-123-4567</p>
+            </div>
+          </div>
+
+          <div class="mail">
+            <div class="icon">
+              <img src="/images/icon-email.svg" alt="" />
+            </div>
+            <div>
+              <p>example@fylo.com</p>
+            </div>
+          </div>
+        </div>
+
+        <div id="second">
+          <div class="second-container">
+            <ul>
+              <li class="py-1"><a href="#">About Us</a></li>
+              <li class="py-1"><a href="#">Jobs</a></li>
+              <li class="py-1"><a href="#">Press</a></li>
+              <li class="py-1"><a href="#">Blog</a></li>
+            </ul>
+
+            <ul>
+              <li class="py-1"><a href="#">Contact Us</a></li>
+              <li class="py-1"><a href="#">Terms</a></li>
+              <li class="py-1"><a href="#">Privacy</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="social py-1">
+          <a href="#">
+            <span class="fa-stack" style="vertical-align: top;">
+              <i class="far fa-circle fa-stack-2x"></i>
+              <i class="fab fa-facebook-f fa-stack-1x"></i>
+            </span>
+          </a>
+
+          <a href="#">
+            <span class="fa-stack" style="vertical-align: top;">
+              <i class="far fa-circle fa-stack-2x"></i>
+              <i class="fab fa-twitter fa-stack-1x"></i>
+            </span>
+          </a>
+
+          <a href="#">
+            <span class="fa-stack" style="vertical-align: top;">
+              <i class="far fa-circle fa-stack-2x"></i>
+              <i class="fab fa-instagram fa-stack-1x"></i>
+            </span>
+          </a>
+        </div>
+      </div>
+    </footer>
+
+    <script
+      src="https://kit.fontawesome.com/c418a5e382.js"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

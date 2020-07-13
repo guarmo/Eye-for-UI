@@ -1,0 +1,432 @@
+/* CSS resets */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* General styles */
+:root {
+  --veryDarkBlue: hsl(243, 87%, 12%);
+  --desBlue: hsl(238, 22%, 44%);
+  --brightBlue: hsl(224, 93%, 58%);
+  --moderateCyan: hsl(170, 45%, 43%);
+  --lightGrayishBlue: hsl(240, 75%, 98%);
+  --lightGray: hsl(0, 0%, 75%);
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  line-height: 1.5;
+  color: var(--veryDarkBlue);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Raleway", sans-serif;
+}
+
+li {
+  list-style: none;
+}
+
+/* Utilities */
+.btn {
+  cursor: pointer;
+  border: none;
+  color: #fff;
+  background: var(--brightBlue);
+  font-family: "Raleway", sans-serif;
+}
+
+.btn:hover {
+  opacity: 0.8;
+}
+
+input[type="email"]::placeholder {
+  color: var(--lightGray);
+  font-family: "Raleway", sans-serif;
+}
+
+.py-1 {
+  padding: 10px 0;
+}
+
+/* Navbar */
+.flex-nav {
+  display: flex;
+  justify-content: space-between;
+  margin: 70px 80px 0;
+  font-family: "Raleway", sans-serif;
+}
+
+.flex-nav ul {
+  display: flex;
+  align-items: center;
+}
+
+.flex-nav ul :nth-child(2) {
+  padding: 0 65px;
+}
+
+.flex-nav ul a {
+  text-decoration: none;
+  color: var(--veryDarkBlue);
+}
+
+/* Grid */
+main .illustration {
+  max-width: 100%;
+}
+
+main h1 {
+  font-size: 38px;
+}
+
+/* Section */
+.section {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.section h1 {
+  padding: 10px 0;
+}
+
+.text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.text p {
+  max-width: 78%;
+}
+
+.illustration {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.illustration img {
+  max-width: 95%;
+  min-width: 100%;
+}
+
+/* Section One */
+.section-one {
+  margin: 40px 80px 100px;
+}
+
+.text .inputs {
+  max-width: 78%;
+  margin-top: 10px;
+}
+
+.text .inputs .emailInput {
+  width: 60%;
+  min-width: 200px;
+  padding: 15px 20px;
+  margin: 0 10px 10px 0;
+}
+
+.text .inputs .btn-section-one {
+  padding: 15px 0;
+  width: 35%;
+  min-width: 200px;
+}
+
+/* Section Two */
+.section-two {
+  background-repeat: no-repeat;
+  background-color: var(--lightGrayishBlue);
+  padding: 40px 80px;
+  margin-top: 200px;
+  position: relative;
+}
+.section-two::after {
+  content: "";
+  background: url(images/bg-curve-desktop.svg);
+  background-repeat: no-repeat;
+  position: absolute;
+  top: -15%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+}
+#seeHow {
+  margin: 10px 0 20px 0;
+  color: var(--moderateCyan);
+}
+
+/* Card */
+.card {
+  padding: 2rem;
+  max-width: 380px;
+  background: #fff;
+  box-shadow: 0 7px 30px -10px rgba(150, 170, 180, 0.5);
+  text-align: initial;
+}
+
+.card p {
+  max-width: 100%;
+  margin: 10px 0;
+}
+
+.footer-card {
+  display: flex;
+}
+
+.card #testiomonial-img {
+  border-radius: 50%;
+  display: inline;
+}
+
+.card #name {
+  margin-top: 5px;
+  margin-left: 15px;
+}
+
+.card #role {
+  font-weight: 500;
+  margin-left: 15px;
+}
+
+/* Pre-footer */
+.pre-footer {
+  background: var(--desBlue);
+  color: #fff;
+  padding: 6rem 80px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.pre-footer p {
+  margin: 20px 0;
+}
+
+.pre-footer .inputs {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  margin-left: 80px;
+}
+
+.pre-footer .inputs #email {
+  width: 90%;
+  padding: 15px 0 15px 20px;
+  margin-bottom: 10px;
+  min-width: 200px;
+}
+
+.pre-footer .inputs .btn {
+  padding: 15px 40px;
+  min-width: 200px;
+}
+
+/* Footer */
+footer {
+  background: var(--veryDarkBlue);
+  color: #fff;
+  padding: 6rem 80px;
+}
+
+footer .container p {
+  color: #fff;
+}
+
+/* Grid */
+.footer-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  margin: 40px 0;
+}
+
+.footer-grid #first .location,
+.footer-grid #first .phone,
+.footer-grid #first .mail {
+  display: flex;
+}
+.footer-grid #first .location p,
+.footer-grid #first .phone p,
+.footer-grid #first .mail p {
+  padding-left: 20px;
+}
+
+/* First section */
+.footer-grid #first .phone {
+  margin: 10px 0 20px 0;
+}
+
+/* Second section */
+.footer-grid #second {
+  display: flex;
+  justify-content: center;
+}
+
+.footer-grid #second ul {
+  margin-right: 20px;
+}
+
+.footer-grid #second a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.footer-grid #second a:hover {
+  opacity: 0.8;
+}
+
+.footer-grid #second .second-container {
+  width: 80%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer-grid #second .second-container .padding {
+  padding: 15px 0;
+}
+
+/* Third section */
+.footer-grid .social {
+  display: flex;
+  justify-content: center;
+}
+
+.footer-grid .social a {
+  color: #fff;
+  text-decoration: none;
+}
+.footer-grid .social a:hover {
+  opacity: 0.8;
+}
+.fa-stack {
+  font-size: 1rem;
+}
+
+/* Media queries */
+@media screen and (max-width: 1080px) {
+  .section {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "illustration"
+      "text";
+  }
+  .section .text {
+    text-align: center;
+    align-items: center;
+    grid-area: text;
+  }
+  .text .inputs .emailInput {
+    margin-right: 0;
+    width: 80%;
+  }
+  .text .inputs .btn {
+    width: 80%;
+  }
+  .illustration {
+    display: flex;
+    align-items: center;
+    grid-area: illustration;
+    margin: 40px 0;
+  }
+  .illustration img {
+    max-width: 70%;
+  }
+  .section-two::after {
+    top: -5%;
+  }
+  .card #name {
+    margin-right: 40px;
+  }
+  .card #role {
+    margin-left: 15px;
+  }
+  .pre-footer {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "inputs"
+      "text";
+  }
+  .pre-footer .inputs {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0 0 20px 0;
+    grid-area: inputs;
+  }
+
+  .pre-footer .inputs #email,
+  .pre-footer .inputs .btn {
+    width: 60%;
+  }
+  .pre-footer .text {
+    align-items: center;
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .flex-nav {
+    margin: 70px 40px 0;
+  }
+  .flex-nav ul {
+    font-size: 14px;
+  }
+  .flex-nav ul :nth-child(2) {
+    padding: 0 10px;
+  }
+  .flex-nav #logo {
+    width: 80px;
+  }
+  .section h1 {
+    padding: 0;
+  }
+  .text p {
+    max-width: 100%;
+  }
+  .section h1 {
+    font-size: 22px;
+  }
+  .section-one {
+    margin: 40px;
+  }
+  .text .inputs .emailInput {
+    width: 100%;
+  }
+  .text .inputs .btn-section-one {
+    width: 100%;
+  }
+  .section-two {
+    padding: 40px 40px;
+  }
+  .pre-footer {
+    padding: 6rem 40px;
+  }
+  .pre-footer .inputs .btn {
+    font-size: 12px;
+  }
+  footer {
+    padding: 6rem 40px;
+  }
+  .footer-grid {
+    grid-template-columns: 1fr;
+  }
+  .footer-grid #second .second-container {
+    flex-direction: column;
+  }
+  .footer-grid #second {
+    justify-content: flex-start;
+  }
+  .footer-grid #second ul {
+    margin: 20px 0;
+  }
+}
