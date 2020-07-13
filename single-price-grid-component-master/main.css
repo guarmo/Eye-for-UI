@@ -1,0 +1,121 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box; }
+
+body {
+  font-size: 16px;
+  font-family: "Karla", sans-serif;
+  margin: 2rem;
+  background: #e5eff5;
+  line-height: 1.4; }
+
+ul {
+  list-style: none; }
+
+a {
+  text-decoration: none; }
+
+.btn {
+  padding: 0.75rem 3.5rem;
+  display: inline-block;
+  text-align: center;
+  cursor: pointer;
+  border-radius: 5px; }
+
+.btn {
+  background: #c0df34;
+  color: #fff;
+  margin-top: 2rem;
+  width: 100%;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24); }
+
+.grid {
+  margin: 20vh auto;
+  height: auto;
+  max-width: 50%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-areas: "join join" "monthly why"; }
+  .grid #join {
+    grid-area: join;
+    background: #fff;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    padding: 2rem; }
+    .grid #join-content {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      height: 100%; }
+    .grid #join :nth-child(1) {
+      color: #2bb3b1;
+      margin-bottom: 1rem; }
+    .grid #join :nth-child(2) {
+      margin-bottom: 0.5rem;
+      color: #c0df34; }
+    .grid #join :nth-child(3),
+    .grid #join :nth-child(4) {
+      color: #98a6bd; }
+  .grid #monthly {
+    grid-area: monthly;
+    background: #2bb3b1;
+    border-bottom-left-radius: 10px;
+    padding: 2rem;
+    color: #fff; }
+    .grid #monthly-content {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      height: 100%; }
+    .grid #monthly :nth-child(1) {
+      margin-bottom: 1rem; }
+    .grid #monthly #amount :nth-child(1) {
+      display: inline; }
+    .grid #monthly #amount :nth-child(2) {
+      margin-left: 0.5rem;
+      display: inline;
+      color: #ededed; }
+  .grid #why {
+    grid-area: why;
+    background: #4abebd;
+    border-bottom-right-radius: 10px;
+    padding: 2rem;
+    color: #ededed; }
+    .grid #why h3 {
+      margin-bottom: 1rem; }
+    .grid #why-content {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      height: 100%; }
+
+.attribution {
+  font-size: 11px;
+  text-align: center; }
+
+.attribution a {
+  color: #3e52a3; }
+
+@media (max-width: 1100px) {
+  .grid {
+    max-width: 70%; } }
+
+@media (max-width: 768px) {
+  body {
+    font-size: 14px; }
+  #monthly-content #amount p {
+    margin: 0 0.2rem !important; }
+  #monthly-content .btn {
+    padding: 1rem; }
+  #why li {
+    margin-top: 0.5rem; } }
+
+@media (max-width: 650px) {
+  .grid {
+    grid-template-areas: "join" "monthly" "why";
+    grid-template-columns: 1fr; }
+    .grid #monthly {
+      border-bottom-left-radius: 0; }
+    .grid #why {
+      border-bottom-left-radius: 10px; } }

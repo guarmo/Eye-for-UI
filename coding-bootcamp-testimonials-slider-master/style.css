@@ -1,0 +1,170 @@
+/* CSS resets */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* General styles */
+:root {
+  --dark-blue: hsl(240, 38%, 20%);
+  --grayish-blue: hsl(240, 18%, 77%);
+}
+
+html,
+body {
+  font-size: 32px;
+  font-family: "Inter", sans-serif;
+  max-height: 100vh;
+  position: relative;
+  color: var(--dark-blue);
+  line-height: 1.3;
+  overflow-x: hidden;
+}
+
+/* Container */
+.container {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.container:after {
+  content: "";
+  background: url(images/pattern-curve.svg);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 500px;
+  height: 100px;
+  z-index: 1;
+}
+
+/* Main content grid */
+.slide {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  background-image: url(images/pattern-bg.svg);
+  background-repeat: no-repeat;
+  background-position: 88% 0;
+  background-size: contain;
+  padding: 1.5rem;
+}
+
+/* Left column: text */
+.slide .text {
+  background-image: url(images/pattern-quotes.svg);
+  background-repeat: no-repeat;
+  background-position: left 35% top 17%;
+  background-size: 100px 80px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  z-index: 2;
+  padding-left: 20%;
+  width: 110%;
+}
+
+.slide .text p.lead {
+  font-weight: 300;
+  margin-bottom: 1rem;
+}
+
+.slide .text footer span#name {
+  font-weight: 700;
+  font-size: 20px;
+}
+.slide .text footer span#profession {
+  color: var(--grayish-blue);
+  font-size: 20px;
+}
+
+/* Right column: img */
+.slide .img {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  position: relative;
+}
+
+/* Slider arrows */
+.arrow {
+  position: absolute;
+  bottom: -5%;
+  left: 20%;
+  cursor: pointer;
+  background: #fff;
+  padding: 0.5rem 0.75rem;
+}
+
+.slide .img .arrow#prev {
+  left: 2rem;
+  border-radius: 50% 0 0 50%;
+}
+.slide .img .arrow#next {
+  left: 3.8rem;
+  border-radius: 0 50% 50% 0;
+}
+
+.slide .img .arrow#next:hover,
+.slide .img .arrow#prev:hover {
+  background: var(--grayish-blue);
+}
+
+/* Media queries */
+@media screen and (max-width: 800px) {
+  .container {
+    height: 100%;
+  }
+  .slide {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "img"
+      "text";
+    grid-gap: 1.8rem;
+    background-repeat: no-repeat;
+    background-position: 10% 10%;
+    background-size: 90%;
+  }
+  .slide .img {
+    grid-area: img;
+    justify-content: center;
+    margin-top: 10%;
+  }
+  .slide .img #testimonial-img {
+    margin-top: 20px;
+    width: 80%;
+  }
+  .slide .img .arrow#prev {
+    left: 4rem;
+  }
+  .slide .img .arrow#next {
+    left: 5.8rem;
+  }
+  .slide .text {
+    grid-area: text;
+    padding: 2rem 0.75rem;
+    text-align: center;
+    width: 100%;
+    background-position: left 50% top 5%;
+    background-size: 100px 80px;
+  }
+  .slide .text p.lead {
+    font-size: 22px;
+    line-height: 1.4;
+  }
+  .slide .text #name,
+  .slide .text #profession {
+    display: block;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .slide .img #testimonial-img {
+    width: 90%;
+  }
+}

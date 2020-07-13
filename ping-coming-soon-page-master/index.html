@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@300;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+
+    <title>Frontend Mentor | Ping coming soon page</title>
+  </head>
+  <body>
+    <div class="container">
+      <img src="images/logo.svg" alt="" id="logo" />
+
+      <!-- Heading section -->
+      <div class="h">
+        <h1 id="heading"><span>We are launching</span> soon!</h1>
+        <h4 id="subHeading">Subscribe and get notified</h4>
+      </div>
+
+      <!-- Inputs section -->
+      <div class="inputContainer">
+        <div class="inputFlex">
+          <input
+            type="email"
+            class="inputField"
+            placeholder="Your email address..."
+          />
+          <p id="errorMsg" class="mobile">
+            Please provide a valid email address
+          </p>
+          <button type="submit" class="submitBtn">Notify Me</button>
+        </div>
+        <p id="errorMsgDesktop">Please provide a valid email address</p>
+      </div>
+
+      <!-- Illustration -->
+      <img src="images/illustration-dashboard.png" id="illustration" alt="" />
+
+      <!-- Social icons -->
+      <div class="social">
+        <a href="#">
+          <span class="fa-stack" style="vertical-align: top;">
+            <i class="far fa-circle fa-stack-2x"></i>
+            <i class="fab fa-facebook-f fa-stack-1x"></i>
+          </span>
+        </a>
+
+        <a href="#">
+          <span class="fa-stack" style="vertical-align: top;">
+            <i class="far fa-circle fa-stack-2x"></i>
+            <i class="fab fa-twitter fa-stack-1x"></i>
+          </span>
+        </a>
+
+        <a href="#">
+          <span class="fa-stack" style="vertical-align: top;">
+            <i class="far fa-circle fa-stack-2x"></i>
+            <i class="fab fa-instagram fa-stack-1x"></i>
+          </span>
+        </a>
+      </div>
+      <footer>
+        <p>&copy; Copyright Ping. All rights reserved.</p>
+      </footer>
+    </div>
+
+    <script
+      src="https://kit.fontawesome.com/c418a5e382.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="main.js"></script>
+  </body>
+</html>
