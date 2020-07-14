@@ -1,0 +1,439 @@
+/* CSS resets */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Utilities */
+:root {
+  --introBg: hsl(217, 28%, 15%);
+  --mainBg: hsl(218, 28%, 13%);
+  --footerBg: hsl(216, 53%, 9%);
+  --testimonialsBg: hsl(219, 30%, 18%);
+  --cyan: hsl(176, 68%, 64%);
+  --blue: hsl(198, 60%, 50%);
+  --white: hsl(0, 0%, 100%);
+  --gradient: linear-gradient(to right, #65e2d9, #339ecc);
+}
+.container-big {
+  max-width: 90%;
+  margin: auto;
+}
+.container-small {
+  max-width: 80%;
+  margin: auto;
+}
+.btn {
+  border: none;
+  cursor: pointer;
+  background: var(--gradient);
+  color: var(--white);
+  border-radius: 20px;
+}
+
+/* General styles */
+body {
+  background-color: var(--mainBg);
+  font-family: "Open Sans", sans-serif;
+  font-size: 14px;
+  color: var(--white);
+}
+h1,
+h2,
+h4,
+.btn {
+  font-family: "Raleway", sans-serif;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+ul {
+  list-style: none;
+}
+
+/* Navbar */
+header {
+  background: var(--introBg);
+}
+.navbar {
+  background: var(--introBg);
+  padding: 5rem 0;
+}
+.navbar .nav-flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.navbar .nav-flex .nav-list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0.7;
+  font-size: 15px;
+}
+.navbar .nav-flex .nav-list :nth-child(2) {
+  padding: 0 60px;
+}
+
+/* Intro section */
+.intro {
+  background-color: var(--introBg);
+  background-image: url(images/bg-curvy-desktop.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: bottom;
+}
+.intro .intro-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding-bottom: 200px;
+}
+.intro .intro-content img {
+  max-width: 100%;
+  height: auto;
+}
+.intro .intro-content h1 {
+  max-width: 70%;
+  font-size: 40px;
+  font-weight: 600;
+  margin: 40px 0;
+  line-height: 1.5;
+}
+.intro .intro-content p {
+  max-width: 50%;
+  line-height: 1.5;
+  font-size: 19px;
+  opacity: 0.8;
+  margin-bottom: 20px;
+}
+.intro .intro-content .btn-intro {
+  height: 55px;
+  width: 24%;
+  min-width: 190px;
+  border-radius: 40px;
+  font-size: 16px;
+}
+
+/* Main */
+main {
+  background-color: var(--mainBg);
+}
+
+/* Grid one */
+.grid-one {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 5rem;
+  max-width: 70%;
+  margin-bottom: 120px;
+}
+.grid-one .box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.grid-one .box h2 {
+  font-size: 18px;
+  margin: 20px 0 10px;
+}
+.grid-one .box p {
+  opacity: 0.8;
+  max-width: 80%;
+}
+.grid-one .box-two,
+.grid-one .box-three {
+  padding-bottom: 15px;
+}
+
+/* Grid two */
+.grid-two {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 2rem;
+  margin-bottom: 160px;
+}
+.grid-two .illustration img {
+  max-width: 100%;
+  height: auto;
+}
+.grid-two .copy {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.grid-two .copy h1 {
+  font-size: 35px;
+  font-weight: 600;
+  max-width: 50%;
+  line-height: 1.5;
+  margin-bottom: 10px;
+}
+.grid-two .copy p {
+  max-width: 85%;
+  font-size: 16px;
+  opacity: 0.8;
+  line-height: 1.5;
+}
+.grid-two .copy :nth-child(3) {
+  margin: 15px 0;
+}
+.grid-two .copy a {
+  color: var(--cyan);
+  border-bottom: 1px solid var(--cyan);
+  font-size: 16px;
+  padding-bottom: 2px;
+  width: 170px;
+}
+
+/* Grid three */
+.grid-three {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 2rem;
+  max-width: 80%;
+  position: relative;
+  margin-bottom: 100px;
+}
+.grid-three::before {
+  content: "";
+  background: url(images/bg-quotes.png);
+  background-repeat: no-repeat;
+  position: absolute;
+  top: -35px;
+  left: -15px;
+  height: 100px;
+  width: 100px;
+  z-index: 0;
+}
+.grid-three .card {
+  background-color: var(--testimonialsBg);
+  padding: 2rem;
+  z-index: 1;
+}
+.grid-three .card p:nth-child(1) {
+  opacity: 0.8;
+  line-height: 1.5;
+}
+.grid-three .card footer {
+  background-color: var(--testimonialsBg);
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 0;
+  margin-top: 20px;
+}
+.grid-three .card footer img {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+}
+.grid-three .card footer .attr {
+  padding-left: 10px;
+}
+.grid-three .card footer .attr h4 {
+  font-size: 11px;
+}
+.grid-three .card footer .attr p {
+  font-size: 10px;
+  opacity: 0.8;
+}
+
+/* Call to action */
+.call-to-action {
+  background-color: var(--introBg);
+  padding: 2rem;
+  text-align: center;
+  max-width: 60%;
+  transform: translateY(50%);
+}
+.call-to-action h2 {
+  font-size: 30px;
+  font-weight: 600;
+}
+.call-to-action p {
+  max-width: 80%;
+  margin: 20px auto 40px;
+  opacity: 0.8;
+  line-height: 1.5;
+}
+.call-to-action form input {
+  height: 50px;
+  width: 60%;
+  padding-left: 20px;
+  border-radius: 40px;
+}
+.call-to-action form button {
+  height: 50px;
+  width: 25%;
+  min-width: 170px;
+  margin-left: 20px;
+  border-radius: 40px;
+}
+
+/* Footer */
+#main-footer {
+  background-color: var(--footerBg);
+  padding: 14rem 0 4rem;
+}
+#main-footer #logo {
+  margin-bottom: 40px;
+}
+#main-footer .container-big {
+  max-width: 85%;
+}
+#main-footer .footer-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+/* Location */
+#main-footer .footer-grid .location {
+  display: flex;
+  align-items: flex-start;
+}
+#main-footer .footer-grid .location p {
+  margin-left: 15px;
+}
+/* Contacts */
+#main-footer .footer-grid .contacts {
+  padding-left: 30px;
+}
+#main-footer .footer-grid .contacts .phone {
+  display: flex;
+  align-items: center;
+}
+#main-footer .footer-grid .contacts .phone p,
+#main-footer .footer-grid .contacts .email p {
+  margin-left: 10px;
+}
+#main-footer .footer-grid .contacts .email {
+  display: flex;
+  align-items: center;
+  margin-top: 15px;
+}
+
+/* Lists */
+#main-footer .footer-grid .lists {
+  display: flex;
+}
+#main-footer .footer-grid .lists ul {
+  margin-right: 50px;
+}
+#main-footer .footer-grid .lists ul li {
+  margin-bottom: 20px;
+}
+
+/* Social icons */
+#main-footer .footer-grid .social #twitter {
+  padding: 0 10px;
+}
+
+/* Media queries */
+@media screen and (max-width: 650px) {
+  .grid {
+    grid-template-columns: 1fr !important;
+  }
+  .container-big,
+  .container-small {
+    max-width: 85%;
+  }
+  .navbar {
+    padding: 2rem 0;
+  }
+  .navbar #logo {
+    width: 100px;
+    height: auto;
+  }
+  .navbar .nav-flex .nav-list :nth-child(2) {
+    padding: 0 10px;
+  }
+  .intro .intro-content {
+    padding-bottom: 0;
+  }
+  .intro .intro-content h1 {
+    max-width: 100%;
+    font-size: 25px;
+    margin: 20px 0;
+  }
+  .intro .intro-content p {
+    max-width: 100%;
+    font-size: 16px;
+  }
+  .grid-one {
+    grid-gap: 2rem;
+    margin-top: 100px;
+  }
+  .grid-two {
+    margin-bottom: 100px;
+  }
+  .grid-two .copy {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .grid-two .copy h1 {
+    max-width: 100%;
+  }
+  .grid-two .copy p {
+    max-width: 100%;
+  }
+  .grid-two .copy a {
+    align-self: flex-start;
+  }
+  .grid-three {
+    margin-bottom: 0;
+  }
+  .grid-three .card {
+    max-width: 90%;
+    margin: auto;
+  }
+  .grid-three::before {
+    width: 40px;
+    height: 40px;
+    left: 10px;
+    background-size: contain;
+  }
+  .call-to-action {
+    padding: 1.5rem;
+  }
+  .call-to-action {
+    margin: 20px auto;
+  }
+  .call-to-action h2 {
+    font-size: 25px;
+  }
+  .call-to-action form input {
+    width: 100%;
+  }
+  .call-to-action form button {
+    width: 100%;
+    margin-top: 10px;
+    margin-left: 0;
+  }
+  #main-footer #logo {
+    width: 150px;
+    height: auto;
+  }
+  #main-footer .footer-grid {
+    grid-gap: 2rem;
+  }
+  #main-footer .footer-grid .contacts {
+    padding-left: 0;
+  }
+  #main-footer .footer-grid .lists {
+    flex-direction: column;
+  }
+  #main-footer .footer-grid .lists ul {
+    margin: 20px 0;
+  }
+  #main-footer .footer-grid .social {
+    text-align: center;
+  }
+}
