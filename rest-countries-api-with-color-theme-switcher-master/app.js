@@ -15,7 +15,7 @@ const infoPage = document.querySelector(".info-page");
 
 // Create country element
 function createElement(el) {
-  return `<div class="card" id="${el.name}">  
+  return `<div class="card" data-name="${el.name}">  
           <img
           class="flag"
           src="${el.flag}"
@@ -151,7 +151,11 @@ grid.addEventListener("click", (e) => {
     grid.style.display = "none";
     mainFlex.style.display = "none";
     infoPage.style.display = "block";
-    fetch(`https://restcountries.eu/rest/v2/name/${e.target.parentElement.id}`)
+    fetch(
+      `https://restcountries.eu/rest/v2/name/${e.target.parentElement.getAttribute(
+        "data-name"
+      )}`
+    )
       .then((res) => res.json())
       .then((data) =>
         data.forEach((el) => {
