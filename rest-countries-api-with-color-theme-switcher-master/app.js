@@ -17,12 +17,12 @@ const infoPage = document.querySelector(".info-page");
 function createElement(el) {
   return `<div class="card" id="${el.name}">  
           <img
-          id="flag"
+          class="flag"
           src="${el.flag}"
           alt="Flag"
           />
           <div class="container">
-            <h4 id="country"><b>${el.name}</b></h4>
+            <h4 class="country"><b>${el.name}</b></h4>
             <div class="population">
               <h6 class="label">Population:</h6>
               <span>${el.population}</span>
@@ -49,7 +49,7 @@ function createElementPage(el) {
   countryInfo.classList.add("country-info");
 
   const flag = document.createElement("img");
-  flag.id = "flag";
+  flag.classList = "flag";
   flag.setAttribute("src", `${el.flag}`);
   flag.setAttribute("alt", "");
 
@@ -61,7 +61,7 @@ function createElementPage(el) {
   countryInfo.appendChild(desc);
 
   const h4 = document.createElement("h4");
-  h4.id = "country";
+  h4.classList = "country";
   h4.textContent = `${el.name}`;
 
   desc.appendChild(h4);
@@ -195,7 +195,7 @@ function loadAllCountries() {
 // Search country by name
 document.querySelector("#search").addEventListener("keyup", (e) => {
   const text = e.target.value.toLowerCase();
-  const countries = document.querySelectorAll("#country");
+  const countries = document.querySelectorAll(".country");
   countries.forEach((country) => {
     const item = country.textContent.trim();
     if (item.toLowerCase().indexOf(text) !== -1) {
