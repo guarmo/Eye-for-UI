@@ -1,0 +1,222 @@
+/* General styles and resets */
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;600;800&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  --darkBlue: hsl(209, 23%, 22%);
+  --veryDarkBlueBg: hsl(207, 26%, 17%);
+  --veryDarkBlueText: hsl(200, 15%, 8%);
+  --darkGray: hsl(0, 0%, 52%);
+  --veryLightGray: hsl(0, 0%, 98%);
+  --white: hsl(0, 0%, 100%);
+}
+body {
+  font-family: "Nunito Sans", sans-serif;
+  font-size: 14px;
+  color: var(--veryDarkBlueText);
+}
+
+/* Header */
+.header-flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 60px;
+  padding: 40px 80px;
+  background-color: var(--white);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+.header-flex h2 {
+  font-weight: bold;
+}
+.mode {
+  cursor: pointer;
+}
+
+/* Main */
+.main-flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 40px 80px;
+  background-color: var(--veryLightGray);
+}
+.main-flex #search {
+  min-width: 400px;
+  height: 50px;
+  padding-left: 20px;
+  border: none;
+  box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.2);
+}
+.main-flex #filterBtn {
+  width: 200px;
+  height: 50px;
+  padding: 0 20px;
+  box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.2);
+  background-color: var(--white);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-family: inherit;
+  font-size: inherit;
+}
+.dropdown-menu {
+  width: 200px;
+}
+
+/* Main grid */
+.main-grid {
+  padding: 40px 80px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 2rem;
+  background-color: var(--veryLightGray);
+}
+
+/* Card */
+.main-grid .card {
+  background-color: var(--white);
+  box-shadow: 0 4px 6px 0 rgba(0, 0, 0, 0.2);
+}
+.main-grid .card #flag {
+  width: 100%;
+  min-height: 180px;
+  max-height: 180px;
+  cursor: pointer;
+}
+.main-grid .card .container {
+  padding: 20px;
+}
+.main-grid .card .container #country {
+  margin-bottom: 10px;
+}
+.main-grid .card .container > * {
+  display: flex;
+}
+.main-grid .card .container > * :first-child {
+  margin: 0 10px 3px 0;
+}
+.main-grid .card .container .label {
+  font-weight: bold;
+}
+.dropdown-item:hover {
+  filter: brightness(150%);
+}
+
+/* Info page */
+.info-page {
+  padding: 20px 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 85vh;
+}
+.country-info {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+.country-info #flag {
+  max-width: 100%;
+  max-height: 100%;
+}
+.desc {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 40px;
+}
+.desc #country {
+  margin-bottom: 20px;
+}
+.desc-info {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  margin-bottom: 20px;
+}
+.desc-info .label {
+  margin: 5px 5px 5px 0;
+  font-weight: bold;
+}
+.desc-info .left > *,
+.desc-info .right > * {
+  display: flex;
+  align-items: center;
+}
+.border-countries h6 {
+  display: inline;
+  font-weight: bold;
+  margin-right: 10px;
+}
+.back-btn,
+.border-country {
+  box-shadow: 0 4px 6px 0 rgba(0, 0, 0, 0.2);
+  background-color: var(--white);
+  padding: 10px 30px;
+  margin-right: 10px;
+  display: inline-block;
+  text-align: center;
+  cursor: pointer;
+  border: none;
+  margin-bottom: 20px;
+}
+
+/* Dark mode classes */
+.dark-bg {
+  background-color: var(--darkBlue) !important;
+  color: var(--white) !important;
+}
+.veryDark-bg {
+  background-color: var(--veryDarkBlueBg) !important;
+  color: var(--white) !important;
+}
+.placeholderColor::-webkit-input-placeholder {
+  color: var(--white) !important;
+}
+
+/* Media queries */
+@media screen and (max-width: 1100px) {
+  .main-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .country-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+}
+@media screen and (max-width: 750px) {
+  .main-flex {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  #search {
+    min-width: 100% !important;
+    margin-bottom: 20px;
+  }
+  .header-flex,
+  .main-flex,
+  .main-grid {
+    padding: 40px;
+  }
+  .main-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .country-info {
+    display: block;
+  }
+}
+@media screen and (max-width: 600px) {
+  .main-grid {
+    grid-template-columns: 1fr;
+  }
+  .header-flex h2 {
+    font-size: 18px;
+    margin-bottom: 0;
+  }
+}
