@@ -1,4 +1,4 @@
-# [Eye-for-UI](https://www.google.com) 
+# [Eye-for-UI](https://github.com/guarmo/Eye-for-UI) 
 
 This repository includes the solutions for UI challenges found at [Frontend Mentor](https://www.frontendmentor.io/dashboard) 
 
