@@ -1,0 +1,177 @@
+/* General styles */
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap");
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+:root {
+  --veryDarkGray: hsl(0, 0%, 17%);
+  --darkGray: hsl(0, 0%, 59%);
+}
+body {
+  font-family: "Rubik", sans-serif;
+  font-size: 18px;
+  color: #fff;
+}
+
+/* Head */
+.head {
+  background-image: url(images/pattern-bg.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 270px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.head #main-head {
+  font-weight: 500;
+  font-size: 30px;
+  margin: 20px 0;
+}
+.head .search {
+  position: relative;
+  margin-bottom: 60px;
+}
+.head .search .searchInput {
+  min-width: 450px;
+  padding: 20px 10px;
+  border-radius: 10px;
+  border: none;
+  font-size: 16px;
+  font-family: "Rubik", sans-serif;
+  cursor: pointer;
+}
+.head .search .arrIcon {
+  padding: 19px;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  background-color: black;
+  position: absolute;
+  right: 0;
+  top: 0;
+  cursor: pointer;
+}
+.head .search .arrIcon:hover {
+  background-color: var(--veryDarkGray);
+}
+
+/* Data showcase */
+.dataShowcase {
+  min-width: 650px;
+  height: 150px;
+  background-color: #fff;
+  border-radius: 10px;
+  position: absolute;
+  top: 220px;
+  z-index: 10;
+  display: flex;
+}
+.dataShowcase .data {
+  width: 25%;
+  z-index: 100;
+  color: var(--veryDarkGray);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.dataShowcase .data span {
+  width: 100%;
+  height: 80px;
+  border-right: 1px solid rgba(0, 0, 0, 0.2);
+  padding-left: 15px;
+}
+.dataShowcase .data #lastSpan {
+  border-right: none;
+}
+.dataShowcase .data.ip {
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+.dataShowcase .data.isp {
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+.dataShowcase .data .title {
+  text-transform: uppercase;
+  color: var(--darkGray);
+  font-size: 14px;
+  font-weight: 900;
+}
+.dataShowcase .data .current {
+  font-size: 20px;
+}
+
+/* Map */
+#mapid {
+  height: 800px;
+  z-index: 0;
+}
+.leaflet-control-zoom,
+.leaflet-control-attribution {
+  display: none;
+}
+
+/* Media queries */
+@media screen and (max-width: 750px) and (orientation: portrait) {
+  .head {
+    justify-content: initial;
+    padding-top: 20px;
+  }
+  .head h1 {
+    font-size: 20px;
+    padding-bottom: 10px;
+  }
+  .head .search .searchInput {
+    min-width: 300px;
+    max-width: 400px;
+    padding: 10px;
+    font-size: 14px;
+  }
+  .head .search .arrIcon {
+    padding: 8px 15px;
+  }
+  .dataShowcase {
+    flex-direction: column;
+    align-items: initial;
+    justify-content: center;
+    min-width: initial;
+    height: initial;
+    width: 280px;
+  }
+  .dataShowcase .data span {
+    border-right: none;
+    padding-left: 0;
+    margin-bottom: 0;
+    width: 280px;
+    text-align: center;
+    padding: 10px;
+  }
+  .dataShowcase .data .title {
+    font-size: 12px;
+  }
+  .dataShowcase .data .current {
+    font-size: 18px;
+  }
+  .head h1 {
+    margin: 0;
+  }
+  .dataShowcase .data .title {
+    margin: 0;
+  }
+}
+
+@media screen and (orientation: landscape) and (max-width: 700px) {
+  .dataShowcase {
+    min-width: initial;
+    width: 550px;
+  }
+  .dataShowcase .data .title {
+    font-size: 10px;
+  }
+  .dataShowcase .data .current {
+    font-size: 14px;
+  }
+}

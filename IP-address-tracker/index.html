@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+      integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+      crossorigin=""
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script
+      src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+      integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+      crossorigin=""
+    ></script>
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | IP Address Tracker</title>
+  </head>
+  <body>
+    <!-- Header -->
+    <header class="head">
+      <h1 id="main-head">IP Address Tracker</h1>
+
+      <!-- Search -->
+      <div class="search">
+        <input
+          type="text"
+          class="searchInput"
+          placeholder="Search for any IP address or domain"
+        />
+        <div class="arrIcon">
+          <img src="images/icon-arrow.svg" alt="" />
+        </div>
+      </div>
+
+      <!-- Showcase -->
+      <div class="dataShowcase">
+        <!-- IP -->
+        <div class="data ip">
+          <span>
+            <h1 class="title">IP address</h1>
+            <h4 class="current" id="currentIp"></h4>
+          </span>
+        </div>
+        <!-- Location -->
+        <div class="data location">
+          <span>
+            <h1 class="title">Location</h1>
+            <h4 class="current" id="currentLocation"></h4>
+          </span>
+        </div>
+        <!-- Timezone -->
+        <div class="data timezone">
+          <span>
+            <h1 class="title">Timezone</h1>
+            <h4 class="current" id="currentTimezone"></h4>
+          </span>
+        </div>
+        <!-- ISP -->
+        <div class="data isp">
+          <span id="lastSpan">
+            <h1 class="title">ISP</h1>
+            <h4 class="current" id="currentIsp"></h4>
+          </span>
+        </div>
+      </div>
+    </header>
+
+    <!-- Map -->
+    <div id="mapid"></div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
